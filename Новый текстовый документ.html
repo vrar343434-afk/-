@@ -1,1 +1,1540 @@
 
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Полезные сайты и приложения</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto:wght@400;700&family=Montserrat:wght@400;700;800&family=Comfortaa:wght@400;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:wght@400;700&family=Pacifico&family=Oswald:wght@400;700&family=Lobster&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<!-- Шрифт Pixeloid Sans -->
+<link href="https://db.onlinewebfonts.com/c/44edad438331a44bf2c79f9b7be0cd1a?family=Pixeloid+Sans" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --accent: #a78bfa;
+    --accent2: #67e8f9;
+    --text: #f1f5f9;
+    --muted: #cbd5e1;
+    --font-family: 'Segoe UI', system-ui, sans-serif;
+    --font-size: 16px;
+    --font-weight-bold: 700;
+    --font-weight-black: 800;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.4s, color 0.4s;
+  }
+
+  /* ===== ТЁМНАЯ ===== */
+  html[data-theme="dark"] body {
+    background:
+      radial-gradient(circle at 15% 20%, #7c3aed 0%, transparent 45%),
+      radial-gradient(circle at 85% 15%, #06b6d4 0%, transparent 45%),
+      radial-gradient(circle at 50% 85%, #db2777 0%, transparent 50%),
+      radial-gradient(circle at 10% 80%, #2563eb 0%, transparent 45%),
+      linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    background-attachment: fixed;
+  }
+  html[data-theme="dark"] { --text: #f1f5f9; --muted: #cbd5e1; }
+
+  /* ===== СВЕТЛАЯ ===== */
+  html[data-theme="light"] body {
+    background:
+      radial-gradient(circle at 15% 20%, #c4b5fd 0%, transparent 45%),
+      radial-gradient(circle at 85% 15%, #a5f3fc 0%, transparent 45%),
+      radial-gradient(circle at 50% 85%, #fbcfe8 0%, transparent 50%),
+      radial-gradient(circle at 10% 80%, #bfdbfe 0%, transparent 45%),
+      linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background-attachment: fixed;
+  }
+  html[data-theme="light"] { --text: #1e293b; --muted: #475569; }
+  html[data-theme="light"] .glass {
+    background: rgba(255, 255, 255, 0.45);
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px rgba(100, 100, 150, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+  html[data-theme="light"] .card:hover {
+    background: rgba(255, 255, 255, 0.65);
+    border-color: rgba(167, 139, 250, 0.6);
+    box-shadow: 0 14px 40px rgba(100, 100, 150, 0.25), 0 0 30px rgba(167, 139, 250, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+  html[data-theme="light"] nav a { color: #475569; }
+  html[data-theme="light"] nav a:hover { color: #1e1b4b; background: rgba(167,139,250,0.2); }
+  html[data-theme="light"] .badge { background: rgba(167, 139, 250, 0.25); color: #6d28d9; border-color: rgba(167, 139, 250, 0.5); }
+  html[data-theme="light"] .card a { color: #0891b2; background: rgba(8, 145, 178, 0.1); border-color: rgba(8, 145, 178, 0.3); }
+  html[data-theme="light"] .card a:hover { background: rgba(8, 145, 178, 0.2); border-color: rgba(8, 145, 178, 0.6); }
+  html[data-theme="light"] header h1 {
+    background: linear-gradient(90deg, #7c3aed, #0891b2, #db2777);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  html[data-theme="light"] .card h3 { color: #1e1b4b; }
+
+  /* ===== НЕОН ===== */
+  html[data-theme="glass"] body {
+    background:
+      radial-gradient(circle at 20% 30%, #00ffcc 0%, transparent 40%),
+      radial-gradient(circle at 80% 20%, #ff00ff 0%, transparent 40%),
+      radial-gradient(circle at 60% 90%, #00aaff 0%, transparent 45%),
+      linear-gradient(135deg, #000000 0%, #0a0014 50%, #001a1a 100%);
+    background-attachment: fixed;
+  }
+  html[data-theme="glass"] { --text: #e0fff9; --muted: #7fffd4; --accent: #00ffcc; --accent2: #ff00ff; }
+  html[data-theme="glass"] .glass { background: rgba(0, 255, 204, 0.05); border-color: rgba(0, 255, 204, 0.3); box-shadow: 0 0 20px rgba(0, 255, 204, 0.15), inset 0 1px 0 rgba(0, 255, 204, 0.2); }
+  html[data-theme="glass"] .card:hover { background: rgba(0, 255, 204, 0.1); border-color: rgba(255, 0, 255, 0.5); box-shadow: 0 0 30px rgba(0, 255, 204, 0.3), 0 0 50px rgba(255, 0, 255, 0.2); }
+  html[data-theme="glass"] header h1 {
+    background: linear-gradient(90deg, #00ffcc, #ff00ff, #00aaff);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  html[data-theme="glass"] .card a { color: #00ffcc; background: rgba(0,255,204,0.1); border-color: rgba(0,255,204,0.4); }
+  html[data-theme="glass"] .badge { background: rgba(255,0,255,0.15); color: #ff99ff; border-color: rgba(255,0,255,0.4); }
+
+  /* ===== ЧЁРНАЯ ===== */
+  html[data-theme="black"] body {
+    background:
+      radial-gradient(circle at 20% 20%, #2a2a2a 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, #1a1a1a 0%, transparent 40%),
+      #000000;
+    background-attachment: fixed;
+  }
+  html[data-theme="black"] { --text: #e5e5e5; --muted: #a3a3a3; --accent: #fbbf24; --accent2: #f59e0b; }
+  html[data-theme="black"] .glass {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  html[data-theme="black"] .card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(251, 191, 36, 0.5);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.9), 0 0 30px rgba(251, 191, 36, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  html[data-theme="black"] header h1 {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b, #d97706);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  html[data-theme="black"] .card a { color: #fbbf24; background: rgba(251,191,36,0.1); border-color: rgba(251,191,36,0.3); }
+  html[data-theme="black"] .card a:hover { background: rgba(251,191,36,0.2); border-color: rgba(251,191,36,0.6); }
+  html[data-theme="black"] .badge { background: rgba(251,191,36,0.15); color: #fcd34d; border-color: rgba(251,191,36,0.4); }
+  html[data-theme="black"] nav a:hover { background: rgba(251,191,36,0.15); color: #fbbf24; }
+
+  /* Плавающие пятна */
+  html[data-theme="dark"] body::before,
+  html[data-theme="dark"] body::after,
+  html[data-theme="glass"] body::before,
+  html[data-theme="glass"] body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+  }
+  html[data-theme="dark"] body::before { width: 400px; height: 400px; background: #a855f7; top: -100px; left: -100px; animation: float1 18s ease-in-out infinite; }
+  html[data-theme="dark"] body::after  { width: 350px; height: 350px; background: #22d3ee; bottom: -100px; right: -100px; animation: float2 22s ease-in-out infinite; }
+  html[data-theme="glass"] body::before { width: 400px; height: 400px; background: #00ffcc; top: -100px; left: -100px; animation: float1 18s ease-in-out infinite; }
+  html[data-theme="glass"] body::after  { width: 350px; height: 350px; background: #ff00ff; bottom: -100px; right: -100px; animation: float2 22s ease-in-out infinite; }
+
+  @keyframes float1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(120px,80px); } }
+  @keyframes float2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-100px,-60px); } }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: background 0.4s, border-color 0.4s, box-shadow 0.4s, backdrop-filter 0.4s;
+  }
+
+  /* ===== УДАЛЕНИЕ СТЕКЛА ===== */
+  html[data-glass="off"] .glass {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  html[data-glass="off"][data-theme="dark"] .glass { background: #1e1b3a; border-color: rgba(255, 255, 255, 0.12); }
+  html[data-glass="off"][data-theme="dark"] .card:hover { background: #262350; }
+  html[data-glass="off"][data-theme="light"] .glass { background: #ffffff; border-color: rgba(150, 150, 200, 0.3); }
+  html[data-glass="off"][data-theme="light"] .card:hover { background: #f5f3ff; }
+  html[data-glass="off"][data-theme="glass"] .glass { background: #001a1a; border-color: rgba(0, 255, 204, 0.3); }
+  html[data-glass="off"][data-theme="glass"] .card:hover { background: #002626; }
+  html[data-glass="off"][data-theme="black"] .glass { background: #111111; border-color: rgba(255, 255, 255, 0.1); }
+  html[data-glass="off"][data-theme="black"] .card:hover { background: #1a1a1a; }
+
+  html[data-glass="off"] .settings-btn {
+    backdrop-filter: blur(16px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  }
+
+  header { position: relative; z-index: 1; text-align: center; padding: 60px 20px 30px; }
+
+  header h1 {
+    font-family: var(--font-family);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    background: linear-gradient(90deg, #c4b5fd, #67e8f9, #f0abfc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    font-weight: var(--font-weight-black);
+    letter-spacing: -0.02em;
+  }
+
+  header .subtitle { max-width: 640px; margin: 0 auto; padding: 16px 24px; border-radius: 20px; color: var(--muted); font-size: 1.05rem; }
+
+  nav {
+    position: sticky; top: 12px; z-index: 20;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;
+    padding: 10px 14px; border-radius: 18px;
+    max-width: 1080px; margin: 0 auto 30px;
+  }
+
+  nav a {
+    color: var(--muted); text-decoration: none;
+    padding: 8px 16px; border-radius: 12px;
+    font-size: 0.88rem; font-weight: 500;
+    transition: all 0.25s; white-space: nowrap;
+    border: 1px solid transparent;
+  }
+  nav a:hover { color: var(--text); background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.25); transform: translateY(-1px); }
+
+  main { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 10px 20px 80px; }
+
+  section { margin-bottom: 50px; scroll-margin-top: 90px; }
+  section h2 { font-size: 1.5rem; margin-bottom: 22px; padding: 12px 20px; border-radius: 16px; display: inline-block; font-weight: var(--font-weight-bold); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+
+  .card {
+    border-radius: 20px; padding: 24px;
+    display: flex; flex-direction: column;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); }
+  html[data-glass="off"] .card::before { display: none; }
+  .card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45), 0 0 30px rgba(167, 139, 250, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .card h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--text); font-weight: var(--font-weight-bold); }
+  .card p { color: var(--muted); font-size: 0.9rem; flex-grow: 1; margin-bottom: 16px; }
+  .card a {
+    align-self: flex-start; color: #67e8f9; text-decoration: none;
+    font-size: 0.88rem; font-weight: 600;
+    padding: 8px 14px; border-radius: 10px;
+    background: rgba(103, 232, 249, 0.1); border: 1px solid rgba(103, 232, 249, 0.3);
+    transition: all 0.25s; word-break: break-all;
+  }
+  .card a:hover { background: rgba(103, 232, 249, 0.25); border-color: rgba(103, 232, 249, 0.6); transform: translateX(3px); }
+
+  .badge {
+    display: inline-block; font-size: 0.68rem;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    padding: 4px 12px; border-radius: 999px;
+    background: rgba(167, 139, 250, 0.22); color: #ddd6fe;
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    margin-bottom: 12px; align-self: flex-start; font-weight: 600;
+  }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 24px; border-radius: 18px; color: var(--muted); font-size: 0.85rem; max-width: 1080px; margin: 0 auto 24px; }
+
+  /* ===== КНОПКА НАСТРОЕК ===== */
+  .settings-btn {
+    position: fixed; top: 20px; right: 20px; z-index: 100;
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    color: var(--text); font-size: 24px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.4s, background 0.25s;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+  }
+  .settings-btn:hover { background: rgba(255,255,255,0.2); transform: rotate(45deg) scale(1.05); }
+  html[data-theme="light"] .settings-btn { background: rgba(255,255,255,0.5); border-color: rgba(150,150,200,0.4); }
+  html[data-theme="black"] .settings-btn { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); }
+
+  /* ===== ПАНЕЛЬ НАСТРОЕК ===== */
+  .settings-overlay {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.35s, visibility 0.35s;
+  }
+  .settings-overlay.open { opacity: 1; visibility: visible; }
+
+  .settings-panel {
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 101;
+    width: 400px; max-width: 92vw; max-height: 85vh;
+    padding: 28px 24px; overflow-y: auto;
+    border-radius: 24px;
+    transform: translate(calc(-50% + 100vw), -50%) rotate(-8deg) scale(0.9);
+    opacity: 0; visibility: hidden;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s, visibility 0.35s;
+  }
+  .settings-panel.open { transform: translate(-50%, -50%) rotate(0deg) scale(1); opacity: 1; visibility: visible; }
+
+  .settings-panel::-webkit-scrollbar { width: 6px; }
+  .settings-panel::-webkit-scrollbar-track { background: transparent; }
+  .settings-panel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+  .settings-panel::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.35); }
+
+  .settings-panel h2 {
+    font-size: 1.3rem; margin-bottom: 18px;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--text);
+  }
+  .settings-close {
+    background: none; border: none; color: var(--text);
+    font-size: 22px; cursor: pointer;
+    padding: 4px 10px; border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .settings-close:hover { background: rgba(255,255,255,0.15); }
+
+  /* ===== АККОРДЕОНЫ ===== */
+  .accordion {
+    border-radius: 14px; overflow: hidden; margin-bottom: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  html[data-theme="light"] .accordion { background: rgba(255,255,255,0.35); border-color: rgba(150,150,200,0.2); }
+  html[data-theme="black"] .accordion { background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.06); }
+
+  .accordion-header {
+    width: 100%; display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 16px; background: none; border: none;
+    color: var(--text); font-size: 0.95rem; font-weight: 600;
+    cursor: pointer; text-align: left; transition: background 0.2s;
+    font-family: inherit;
+  }
+  .accordion-header:hover { background: rgba(255,255,255,0.06); }
+  html[data-theme="light"] .accordion-header:hover { background: rgba(150,150,200,0.1); }
+
+  .accordion-icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--accent);
+  }
+  .accordion.open .accordion-icon { transform: rotate(180deg); }
+
+  .accordion-body {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s;
+    padding: 0 16px;
+  }
+  .accordion.open .accordion-body { max-height: 900px; padding: 4px 16px 18px; }
+
+  /* ТЕМЫ */
+  .theme-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .theme-option {
+    border: 2px solid transparent; border-radius: 12px;
+    padding: 10px 6px; cursor: pointer;
+    background: rgba(255,255,255,0.06); color: var(--text);
+    font-size: 0.75rem; font-weight: 600; text-align: center;
+    transition: all 0.2s;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    font-family: inherit;
+  }
+  .theme-option:hover { background: rgba(255,255,255,0.14); transform: translateY(-2px); }
+  .theme-option.active { border-color: var(--accent); background: rgba(167,139,250,0.2); }
+  html[data-theme="light"] .theme-option { background: rgba(255,255,255,0.4); }
+  html[data-theme="light"] .theme-option:hover { background: rgba(255,255,255,0.7); }
+  html[data-theme="black"] .theme-option { background: rgba(255,255,255,0.04); }
+
+  .theme-swatch { width: 100%; height: 30px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); }
+  .swatch-dark  { background: linear-gradient(135deg, #0f172a, #7c3aed, #06b6d4); }
+  .swatch-light { background: linear-gradient(135deg, #f8fafc, #c4b5fd, #a5f3fc); }
+  .swatch-glass { background: linear-gradient(135deg, #000, #00ffcc, #ff00ff); }
+  .swatch-black { background: linear-gradient(135deg, #000, #1a1a1a, #fbbf24); }
+
+  /* ШРИФТЫ */
+  .font-options { display: flex; flex-direction: column; gap: 6px; }
+  .font-option {
+    border: 1px solid rgba(255,255,255,0.12); border-radius: 10px;
+    padding: 10px 14px; cursor: pointer;
+    background: rgba(255,255,255,0.05); color: var(--text);
+    text-align: left; transition: all 0.2s; font-size: 0.9rem;
+  }
+  .font-option:hover { background: rgba(255,255,255,0.12); transform: translateX(3px); }
+  .font-option.active { border-color: var(--accent); background: rgba(167,139,250,0.18); }
+  html[data-theme="light"] .font-option { background: rgba(255,255,255,0.4); border-color: rgba(150,150,200,0.25); }
+  html[data-theme="light"] .font-option:hover { background: rgba(255,255,255,0.7); }
+  html[data-theme="light"] .font-option.active { background: rgba(167,139,250,0.25); }
+  html[data-theme="black"] .font-option { background: rgba(255,255,255,0.03); }
+
+  .fp-inter { font-family: 'Inter', sans-serif; }
+  .fp-roboto { font-family: 'Roboto', sans-serif; }
+  .fp-montserrat { font-family: 'Montserrat', sans-serif; }
+  .fp-comfortaa { font-family: 'Comfortaa', cursive; }
+  .fp-mono { font-family: 'JetBrains Mono', monospace; }
+  .fp-playfair { font-family: 'Playfair Display', serif; }
+  .fp-pacifico { font-family: 'Pacifico', cursive; }
+  .fp-oswald { font-family: 'Oswald', sans-serif; }
+  .fp-lobster { font-family: 'Lobster', cursive; }
+  .fp-rubik { font-family: 'Rubik', sans-serif; }
+  .fp-pixeloid { font-family: 'Pixeloid Sans', monospace; }
+
+  /* РАЗМЕР */
+  .size-options { display: flex; gap: 8px; align-items: center; }
+  .size-btn {
+    flex: 1; border: 1px solid rgba(255,255,255,0.15); border-radius: 10px;
+    padding: 8px; background: rgba(255,255,255,0.05); color: var(--text);
+    cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s;
+    font-family: inherit;
+  }
+  .size-btn:hover { background: rgba(255,255,255,0.14); }
+  .size-btn.active { border-color: var(--accent); background: rgba(167,139,250,0.2); }
+  html[data-theme="light"] .size-btn { background: rgba(255,255,255,0.4); border-color: rgba(150,150,200,0.25); }
+  html[data-theme="light"] .size-btn:hover { background: rgba(255,255,255,0.7); }
+  html[data-theme="light"] .size-btn.active { background: rgba(167,139,250,0.25); }
+  html[data-theme="black"] .size-btn { background: rgba(255,255,255,0.03); }
+
+  /* ===== ПЕРЕКЛЮЧАТЕЛЬ СТЕКЛА ===== */
+  .toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; gap: 12px; }
+  .toggle-label { display: flex; flex-direction: column; gap: 2px; }
+  .toggle-label strong { font-size: 0.92rem; color: var(--text); font-weight: 600; }
+  .toggle-label span { font-size: 0.75rem; color: var(--muted); }
+
+  .switch { position: relative; display: inline-block; width: 52px; height: 28px; flex-shrink: 0; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .switch .slider {
+    position: absolute; cursor: pointer; inset: 0;
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.3s, border-color 0.3s; border-radius: 28px;
+  }
+  .switch .slider::before {
+    content: ''; position: absolute; height: 20px; width: 20px;
+    left: 3px; top: 3px; background: #fff;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  .switch input:checked + .slider { background: var(--accent); border-color: var(--accent); }
+  .switch input:checked + .slider::before { transform: translateX(24px); }
+  html[data-theme="light"] .switch .slider { background: rgba(150,150,200,0.3); border-color: rgba(150,150,200,0.4); }
+  html[data-theme="black"] .switch .slider { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); }
+
+  .reset-btn {
+    width: 100%; padding: 12px; border-radius: 12px;
+    border: 1px solid rgba(255,100,100,0.4);
+    background: rgba(255,100,100,0.1); color: #ff8888;
+    font-weight: 600; cursor: pointer; font-size: 0.9rem;
+    transition: all 0.2s; margin-top: 8px; font-family: inherit;
+  }
+  .reset-btn:hover { background: rgba(255,100,100,0.2); transform: scale(1.02); }
+
+  /* ===== КОМБИНАЦИИ КЛАВИШ ===== */
+  .shortcuts-section {
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  html[data-theme="light"] .shortcuts-section { background: rgba(255,255,255,0.4); border-color: rgba(150,150,200,0.25); }
+  html[data-theme="black"] .shortcuts-section { background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.06); }
+
+  .shortcuts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 26px;
+  }
+  .shortcuts-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text);
+  }
+
+  .trainer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 14px;
+    border: 1px solid rgba(103, 232, 249, 0.4);
+    background: rgba(103, 232, 249, 0.12);
+    color: #67e8f9;
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .trainer-btn:hover {
+    background: rgba(103, 232, 249, 0.25);
+    border-color: rgba(103, 232, 249, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(103, 232, 249, 0.2);
+  }
+  html[data-theme="black"] .trainer-btn { border-color: rgba(251,191,36,0.4); background: rgba(251,191,36,0.1); color: #fbbf24; }
+  html[data-theme="black"] .trainer-btn:hover { background: rgba(251,191,36,0.2); box-shadow: 0 8px 24px rgba(251,191,36,0.2); }
+
+  .shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+
+  .shortcut-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Исправление вылезания клавиш */
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.25s;
+  }
+  .shortcut-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+  }
+  html[data-theme="light"] .shortcut-item { background: rgba(255,255,255,0.55); border-color: rgba(150,150,200,0.2); }
+  html[data-theme="light"] .shortcut-item:hover { background: rgba(255,255,255,0.8); }
+  html[data-theme="black"] .shortcut-item { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+
+  .shortcut-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 500;
+    flex: 1 1 100px;
+    min-width: 100px;
+  }
+
+  .shortcut-keys {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap; /* Исправление вылезания клавиш */
+  }
+  .key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 7px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+  html[data-theme="light"] .key { background: rgba(255,255,255,0.9); border-color: rgba(150,150,200,0.3); border-bottom-color: rgba(150,150,200,0.5); }
+  html[data-theme="black"] .key { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); }
+  html[data-theme="glass"] .key { background: rgba(0,255,204,0.1); border-color: rgba(0,255,204,0.3); border-bottom-color: rgba(0,255,204,0.5); color: #00ffcc; }
+
+  /* ===== МОДАЛЬНОЕ ОКНО ТРЕНАЖЁРА ===== */
+  .trainer-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.35s, visibility 0.35s;
+  }
+  .trainer-overlay.open { opacity: 1; visibility: visible; }
+
+  .trainer-modal {
+    width: 880px;
+    max-width: 96vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 36px 32px;
+    border-radius: 24px;
+    transform: scale(0.85) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: start;
+  }
+  .trainer-overlay.open .trainer-modal { transform: scale(1) translateY(0); }
+
+  .trainer-main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trainer-modal .close-modal {
+    position: absolute;
+    top: 14px; right: 14px;
+    background: none; border: none;
+    color: var(--text); font-size: 22px;
+    cursor: pointer; padding: 6px 12px;
+    border-radius: 8px; transition: background 0.2s;
+  }
+  .trainer-modal .close-modal:hover { background: rgba(255,255,255,0.15); }
+
+  .trainer-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .trainer-subtitle {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 26px;
+  }
+
+  .trainer-progress-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  .trainer-progress-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transition: width 0.4s ease;
+  }
+  .trainer-counter {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 26px;
+    font-weight: 600;
+  }
+
+  .trainer-task {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 22px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trainer-keys {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    min-height: 70px;
+    align-items: center;
+  }
+
+  .trainer-key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    height: 58px;
+    padding: 0 16px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 3px solid rgba(255,255,255,0.3);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    transition: all 0.15s;
+  }
+  .trainer-key.pressed {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    transform: translateY(3px);
+    border-bottom-width: 1px;
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+  }
+  .trainer-key.correct {
+    background: #22c55e;
+    border-color: #22c55e;
+    color: #fff;
+    box-shadow: 0 0 24px rgba(34, 197, 94, 0.6);
+  }
+  .trainer-key.wrong {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #fff;
+    animation: shake 0.3s;
+    box-shadow: 0 0 24px rgba(239, 68, 68, 0.6);
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+  }
+
+  .trainer-feedback {
+    min-height: 28px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    transition: color 0.2s;
+  }
+  .trainer-feedback.success { color: #22c55e; }
+  .trainer-feedback.error { color: #ef4444; }
+
+  .trainer-restart {
+    padding: 12px 26px;
+    border-radius: 12px;
+    border: 1px solid rgba(103, 232, 249, 0.4);
+    background: rgba(103, 232, 249, 0.12);
+    color: #67e8f9;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-family: inherit;
+    display: none;
+  }
+  .trainer-restart:hover { background: rgba(103, 232, 249, 0.25); }
+  .trainer-restart.visible { display: inline-block; }
+
+  .trainer-hint {
+    margin-top: 18px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    opacity: 0.8;
+  }
+
+  .trainer-warning {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(251, 191, 36, 0.12);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    color: #fcd34d;
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+  html[data-theme="light"] .trainer-warning { background: rgba(251,191,36,0.15); color: #92400e; }
+  html[data-theme="black"] .trainer-warning { background: rgba(251,191,36,0.1); color: #fbbf24; }
+
+  /* ===== РЕДАКТИРУЕМАЯ ПАНЕЛЬ ЗАМЕТОК ===== */
+  .notes-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+  .notes-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .notes-editable {
+    min-height: 260px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--text);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: auto;
+    max-height: 380px;
+    font-family: inherit;
+  }
+  .notes-editable:focus {
+    border-color: var(--accent);
+    background: rgba(255,255,255,0.08);
+  }
+  .notes-editable:empty::before {
+    content: attr(data-placeholder);
+    color: var(--muted);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  html[data-theme="light"] .notes-editable { background: rgba(255,255,255,0.5); border-color: rgba(150,150,200,0.3); }
+  html[data-theme="light"] .notes-editable:focus { background: rgba(255,255,255,0.7); }
+  html[data-theme="black"] .notes-editable { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); }
+
+  .notes-hint {
+    font-size: 0.72rem;
+    color: var(--muted);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 760px) {
+    .trainer-modal {
+      grid-template-columns: 1fr;
+      width: 560px;
+    }
+    .notes-editable { min-height: 140px; max-height: 200px; }
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 40px 16px 20px; }
+    .grid { grid-template-columns: 1fr; }
+    nav { top: 8px; margin: 0 10px 20px; }
+    .settings-btn { top: 12px; right: 12px; width: 46px; height: 46px; font-size: 20px; }
+    .settings-panel { width: 92vw; padding: 22px 18px; }
+    .shortcuts-section { padding: 20px 16px; }
+    .shortcuts-header { flex-direction: column; align-items: flex-start; }
+    .trainer-modal { padding: 28px 20px; }
+    .trainer-key { min-width: 48px; height: 48px; font-size: 0.95rem; padding: 0 12px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    body::before, body::after { animation: none; }
+    .card, nav a, .card a, .settings-btn, .settings-panel, .accordion-icon, .accordion-body { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<button class="settings-btn" id="settingsBtn" aria-label="Настройки" title="Настройки">⚙️</button>
+
+<div class="settings-overlay" id="settingsOverlay"></div>
+
+<aside class="settings-panel glass" id="settingsPanel" aria-label="Настройки">
+  <h2>
+    Настройки
+    <button class="settings-close" id="settingsClose" aria-label="Закрыть">✕</button>
+  </h2>
+
+  <div class="accordion open">
+    <button class="accordion-header" type="button">
+      <span>🎨 Тема</span>
+      <span class="accordion-icon">▼</span>
+    </button>
+    <div class="accordion-body">
+      <div class="theme-options">
+        <button class="theme-option active" data-theme-value="dark">
+          <span class="theme-swatch swatch-dark"></span>
+          Тёмная
+        </button>
+        <button class="theme-option" data-theme-value="light">
+          <span class="theme-swatch swatch-light"></span>
+          Светлая
+        </button>
+        <button class="theme-option" data-theme-value="glass">
+          <span class="theme-swatch swatch-glass"></span>
+          Неон
+        </button>
+        <button class="theme-option" data-theme-value="black">
+          <span class="theme-swatch swatch-black"></span>
+          Чёрная
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion open">
+    <button class="accordion-header" type="button">
+      <span>🧊 Эффект стекла</span>
+      <span class="accordion-icon">▼</span>
+    </button>
+    <div class="accordion-body">
+      <div class="toggle-row">
+        <div class="toggle-label">
+          <strong>Стекло</strong>
+          <span>Размытие и прозрачность карточек</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="glassToggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" type="button">
+      <span>🔤 Шрифт</span>
+      <span class="accordion-icon">▼</span>
+    </button>
+    <div class="accordion-body">
+      <div class="font-options">
+        <button class="font-option fp-inter active" data-font="'Inter', sans-serif">Inter — современный</button>
+        <button class="font-option fp-roboto" data-font="'Roboto', sans-serif">Roboto — классический</button>
+        <button class="font-option fp-montserrat" data-font="'Montserrat', sans-serif">Montserrat — геометричный</button>
+        <button class="font-option fp-rubik" data-font="'Rubik', sans-serif">Rubik — мягкий</button>
+        <button class="font-option fp-oswald" data-font="'Oswald', sans-serif">Oswald — узкий</button>
+        <button class="font-option fp-comfortaa" data-font="'Comfortaa', cursive">Comfortaa — округлый</button>
+        <button class="font-option fp-playfair" data-font="'Playfair Display', serif">Playfair — элегантный</button>
+        <button class="font-option fp-lobster" data-font="'Lobster', cursive">Lobster — рукописный</button>
+        <button class="font-option fp-pacifico" data-font="'Pacifico', cursive">Pacifico — кисть</button>
+        <button class="font-option fp-mono" data-font="'JetBrains Mono', monospace">JetBrains Mono — код</button>
+        <button class="font-option fp-pixeloid" data-font="'Pixeloid Sans', monospace">Pixeloid Sans — пиксельный</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" type="button">
+      <span>📏 Размер шрифта</span>
+      <span class="accordion-icon">▼</span>
+    </button>
+    <div class="accordion-body">
+      <div class="size-options">
+        <button class="size-btn" data-size="14px">S</button>
+        <button class="size-btn active" data-size="16px">M</button>
+        <button class="size-btn" data-size="18px">L</button>
+        <button class="size-btn" data-size="20px">XL</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="reset-btn" id="resetSettings">🔄 Сбросить настройки</button>
+</aside>
+
+<header>
+  <h1>Полезные сайты и приложения</h1>
+  <p class="subtitle glass">
+    Подборка сайтов и приложений для создания игр, моделей, анимации,
+    редактирования видео и изображений
+  </p>
+</header>
+
+<nav class="glass">
+  <a href="#ai">ИИ-помощники</a>
+  <a href="#models">Модели и анимация</a>
+  <a href="#games">Создание игр</a>
+  <a href="#media">Изображения и видео</a>
+  <a href="#extra">Доп. сайты</a>
+  <a href="#shortcuts">Комбинации клавиш</a>
+</nav>
+
+<main>
+
+  <section id="ai">
+    <h2 class="glass">ИИ-Помощники</h2>
+    <div class="grid">
+      <div class="card glass">
+        <span class="badge">ИИ</span>
+        <h3>DeepSeek</h3>
+        <p>Может помочь с кодами и ошибками, подсказывает, какие шаги делать.</p>
+        <a href="https://chat.deepseek.com" target="_blank" rel="noopener">Открыть сайт →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">ИИ</span>
+        <h3>Алиса AI</h3>
+        <p>Нейросеть Яндекса для повседневных задач: отвечает на вопросы, генерирует изображения, переводит текст, анализирует фото и помогает с учёбой. Работает бесплатно, есть опция «Алиса Плюс» с расширенными возможностями.</p>
+        <a href="https://alice.yandex.ru" target="_blank" rel="noopener">Открыть сайт →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="models">
+    <h2 class="glass">Редактор моделей и анимация</h2>
+    <div class="grid">
+      <div class="card glass">
+        <span class="badge">3D-модели</span>
+        <h3>Sketchfab</h3>
+        <p>В нём можно найти миллионы моделей — от кота до детализированного города.</p>
+        <a href="https://sketchfab.com" target="_blank" rel="noopener">Открыть сайт →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Анимация</span>
+        <h3>Mixamo</h3>
+        <p>На этом сайте вы можете анимировать свою модель (только для моделей людей). Иногда может попросить поставить точки на модели.</p>
+        <a href="https://www.mixamo.com" target="_blank" rel="noopener">Открыть сайт →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Приложение</span>
+        <h3>Blender</h3>
+        <p>В этой программе можно создавать свои модели или редактировать их, а также делать свою анимацию.</p>
+        <a href="https://www.blender.org/download/" target="_blank" rel="noopener">Скачать →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">3D-генерация</span>
+        <h3>Rodin (Hyper3D)</h3>
+        <p>AI-генератор 3D-моделей из текста или изображения. Позволяет создавать детализированные модели с чистой топологией. Можно генерировать и просматривать результат бесплатно, а платить — только при скачивании понравившейся модели.</p>
+        <a href="https://hyper3d.ai/workspace/rodin?lang=ru" target="_blank" rel="noopener">Открыть сайт →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Песочница</span>
+        <h3>Substrata</h3>
+        <p>Это как видеоигра, но ты сам всё создаёшь и редактируешь. Можно создавать что угодно с компанией, даже перенести модель из Blender (с определённым форматом).</p>
+        <a href="https://substrata.net" target="_blank" rel="noopener">Скачать / веб-версия →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="games">
+    <h2 class="glass">Для создания игр</h2>
+    <div class="grid">
+      <div class="card glass">
+        <span class="badge">Игровой движок</span>
+        <h3>Unity</h3>
+        <p>Приложение для создания игр на Android, ПК, VR и веб-сайты. В модель можно вписать скрипт (код) для движения или действия.</p>
+        <a href="https://unity.com/ru" target="_blank" rel="noopener">Скачать →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Код</span>
+        <h3>VS Code</h3>
+        <p>Программа для того, чтобы писать коды. С её помощью можно сделать сайт или код для Unity.</p>
+        <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Скачать →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="media">
+    <h2 class="glass">Редактор изображений или видео</h2>
+    <div class="grid">
+      <div class="card glass">
+        <span class="badge">Видео</span>
+        <h3>CapCut</h3>
+        <p>Редактор видео, удобен для создания туториалов или прохождений игр. Есть множество эффектов, можно вставить своё изображение и звук.</p>
+        <a href="https://www.capcut.com" target="_blank" rel="noopener">Скачать →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Изображения</span>
+        <h3>iLoveIMG</h3>
+        <p>Редактор изображений. В нём есть малая часть возможностей, но что-то дорисовать или подредактировать можно.</p>
+        <a href="https://www.iloveimg.com" target="_blank" rel="noopener">Открыть сайт →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="extra">
+    <h2 class="glass">Доп. сайты и приложения</h2>
+    <div class="grid">
+      <div class="card glass">
+        <span class="badge">Карты</span>
+        <h3>Google Maps</h3>
+        <p>Карта мира.</p>
+        <a href="https://www.google.com/maps" target="_blank" rel="noopener">Открыть →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Карты</span>
+        <h3>Яндекс Карты</h3>
+        <p>Карты и навигация от Яндекса.</p>
+        <a href="https://yandex.ru/maps" target="_blank" rel="noopener">Открыть →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Мессенджер</span>
+        <h3>Telegram</h3>
+        <p>На чужом устройстве заходить только через инкогнито.</p>
+        <a href="https://web.telegram.org" target="_blank" rel="noopener">Открыть →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Мессенджер</span>
+        <h3>Max</h3>
+        <p>На чужих устройствах не заходить, хотя в любом случае могут взломать.</p>
+        <a href="https://max.ru" target="_blank" rel="noopener">Открыть →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Расширение</span>
+        <h3>Save image as Type</h3>
+        <p>Расширение для браузера, с ним можно скачивать изображения в любом формате.</p>
+        <a href="https://chromewebstore.google.com/detail/save-image-as-type/gabfmnliflodkdafenbcpjdlppllnemd" target="_blank" rel="noopener">Установить →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Расширение</span>
+        <h3>Adblock Plus</h3>
+        <p>Расширение, которое блокирует рекламу на всех сайтах.</p>
+        <a href="https://chromewebstore.google.com/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb" target="_blank" rel="noopener">Установить →</a>
+      </div>
+      <div class="card glass">
+        <span class="badge">Тренажёр</span>
+        <h3>Клавогонки</h3>
+        <p>Сайт, на котором можно научиться писать быстрее и увидеть свою скорость.</p>
+        <a href="https://klavogonki.ru" target="_blank" rel="noopener">Открыть →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shortcuts">
+    <div class="shortcuts-section">
+      <div class="shortcuts-header">
+        <h2>⌨️ Комбинации клавиш</h2>
+        <button class="trainer-btn" id="trainerBtn">🎯 Тренировка</button>
+      </div>
+      <div class="shortcuts-grid" id="shortcutsGrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="glass">
+  Сделано с ❤️ — каталог приложений и сайтов
+</footer>
+
+<div class="trainer-overlay" id="trainerOverlay">
+  <div class="trainer-modal glass" style="position: relative;">
+    <button class="close-modal" id="trainerClose" aria-label="Закрыть">✕</button>
+
+    <!-- Левая часть — тренажёр -->
+    <div class="trainer-main">
+      <div class="trainer-title">🎯 Тренировка комбинаций</div>
+      <div class="trainer-subtitle">Нажмите правильную комбинацию клавиш</div>
+
+      <div class="trainer-progress-bar">
+        <div class="trainer-progress-fill" id="trainerProgress"></div>
+      </div>
+      <div class="trainer-counter" id="trainerCounter">Задание 1 из 10</div>
+
+      <div class="trainer-task" id="trainerTask">Нажмите комбинацию</div>
+      <div class="trainer-keys" id="trainerKeys"></div>
+      <div class="trainer-feedback" id="trainerFeedback"></div>
+
+      <button class="trainer-restart" id="trainerRestart">🔄 Начать заново</button>
+      <div class="trainer-hint">Подсказка: нажимайте клавиши одновременно (модификаторы + основная клавиша)</div>
+      <div class="trainer-warning">ℹ️ Во время тренировки браузер не выполняет системные действия только для клавиш из текущего задания. Остальные клавиши работают как обычно.</div>
+    </div>
+
+    <!-- Правая часть — редактируемые заметки -->
+    <div class="notes-panel">
+      <div class="notes-title">📝 Мои заметки</div>
+      <div
+        class="notes-editable"
+        id="notesEditable"
+        contenteditable="true"
+        spellcheck="false"
+        data-placeholder="Пишите здесь свои заметки во время тренировки... Текст сохраняется автоматически."
+      ></div>
+      <div class="notes-hint">✏️ Поле редактируемое — кликните и пишите. Сохраняется автоматически.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const root = document.documentElement;
+  const settingsBtn = document.getElementById('settingsBtn');
+  const settingsPanel = document.getElementById('settingsPanel');
+  const settingsOverlay = document.getElementById('settingsOverlay');
+  const settingsClose = document.getElementById('settingsClose');
+  const resetBtn = document.getElementById('resetSettings');
+  const glassToggle = document.getElementById('glassToggle');
+
+  const DEFAULTS = {
+    theme: 'dark',
+    font: "'Segoe UI', system-ui, sans-serif",
+    size: '16px',
+    glass: true
+  };
+
+  function openPanel() {
+    settingsPanel.classList.add('open');
+    settingsOverlay.classList.add('open');
+  }
+  function closePanel() {
+    settingsPanel.classList.remove('open');
+    settingsOverlay.classList.remove('open');
+  }
+
+  settingsBtn.addEventListener('click', openPanel);
+  settingsClose.addEventListener('click', closePanel);
+  settingsOverlay.addEventListener('click', closePanel);
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    document.querySelectorAll('.theme-option').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.themeValue === theme);
+    });
+    localStorage.setItem('site-theme', theme);
+  }
+
+  function applyFont(font) {
+    root.style.setProperty('--font-family', font);
+    document.querySelectorAll('.font-option').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.font === font);
+    });
+    localStorage.setItem('site-font', font);
+  }
+
+  function applySize(size) {
+    root.style.setProperty('--font-size', size);
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.size === size);
+    });
+    localStorage.setItem('site-size', size);
+  }
+
+  function applyGlass(on) {
+    root.setAttribute('data-glass', on ? 'on' : 'off');
+    glassToggle.checked = on;
+    localStorage.setItem('site-glass', on ? 'on' : 'off');
+  }
+
+  document.querySelectorAll('.theme-option').forEach(btn => {
+    btn.addEventListener('click', () => applyTheme(btn.dataset.themeValue));
+  });
+  document.querySelectorAll('.font-option').forEach(btn => {
+    btn.addEventListener('click', () => applyFont(btn.dataset.font));
+  });
+  document.querySelectorAll('.size-btn').forEach(btn => {
+    btn.addEventListener('click', () => applySize(btn.dataset.size));
+  });
+  glassToggle.addEventListener('change', () => applyGlass(glassToggle.checked));
+
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      header.parentElement.classList.toggle('open');
+    });
+  });
+
+  resetBtn.addEventListener('click', () => {
+    applyTheme(DEFAULTS.theme);
+    applyFont(DEFAULTS.font);
+    applySize(DEFAULTS.size);
+    applyGlass(DEFAULTS.glass);
+  });
+
+  const savedTheme = localStorage.getItem('site-theme') || DEFAULTS.theme;
+  const savedFont = localStorage.getItem('site-font') || DEFAULTS.font;
+  const savedSize = localStorage.getItem('site-size') || DEFAULTS.size;
+  const savedGlass = (localStorage.getItem('site-glass') || 'on') === 'on';
+  applyTheme(savedTheme);
+  applyFont(savedFont);
+  applySize(savedSize);
+  applyGlass(savedGlass);
+
+  // ===== КОМБИНАЦИИ КЛАВИШ =====
+  const shortcuts = [
+    // Тренируемые
+    { keys: ['Ctrl', 'C'], desc: 'Скопировать', id: 'copy' },
+    { keys: ['Ctrl', 'V'], desc: 'Вставить', id: 'paste' },
+    { keys: ['Ctrl', 'X'], desc: 'Вырезать', id: 'cut' },
+    { keys: ['Ctrl', 'A'], desc: 'Выделить всё', id: 'select-all' },
+    { keys: ['Ctrl', 'Z'], desc: 'Отменить действие', id: 'undo' },
+    { keys: ['Ctrl', 'Y'], desc: 'Повторить действие', id: 'redo' },
+    { keys: ['Ctrl', 'S'], desc: 'Сохранить', id: 'save' },
+    { keys: ['Ctrl', 'F'], desc: 'Найти на странице', id: 'find' },
+    { keys: ['Ctrl', 'B'], desc: 'Жирный шрифт', id: 'bold' },
+    { keys: ['Ctrl', 'I'], desc: 'Курсив', id: 'italic' },
+    { keys: ['Ctrl', 'U'], desc: 'Подчёркивание', id: 'underline' },
+    { keys: ['Ctrl', 'Shift', 'V'], desc: 'Вставить без форматирования', id: 'paste-plain' },
+    { keys: ['Ctrl', 'Backspace'], desc: 'Удалить слово перед курсором', id: 'delete-word' },
+    { keys: ['Ctrl', 'Delete'], desc: 'Удалить слово после курсора', id: 'delete-word-next' },
+    { keys: ['Shift', 'Delete'], desc: 'Удалить файл навсегда', id: 'delete-permanent' },
+    { keys: ['Ctrl', 'D'], desc: 'Добавить в закладки', id: 'bookmark' },
+    { keys: ['Ctrl', 'P'], desc: 'Печать страницы', id: 'print' },
+    { keys: ['Ctrl', '0'], desc: 'Сбросить масштаб', id: 'reset-zoom' },
+    { keys: ['Ctrl', '+'], desc: 'Увеличить масштаб', id: 'zoom-in' },
+    { keys: ['Ctrl', 'Shift', '+'], desc: 'Увеличить масштаб (сильнее)', id: 'zoom-in-more' },
+    { keys: ['Win', 'V'], desc: 'История буфера обмена', id: 'clipboard-history' },
+
+    // Только для справки (не в тренажёре)
+    { keys: ['Ctrl', 'R'], desc: 'Обновить страницу', id: 'refresh', noTrainer: true },
+    { keys: ['F5'], desc: 'Обновить страницу', id: 'f5-refresh', noTrainer: true },
+    { keys: ['Win', 'Shift', 'S'], desc: 'Снимок части экрана', id: 'screenshot', noTrainer: true },
+    { keys: ['Win', 'L'], desc: 'Заблокировать компьютер', id: 'lock', noTrainer: true },
+    { keys: ['Win', 'E'], desc: 'Открыть Проводник', id: 'explorer', noTrainer: true },
+    { keys: ['Win', 'R'], desc: 'Открыть окно «Выполнить»', id: 'run', noTrainer: true },
+    { keys: ['Win', 'Tab'], desc: 'Представление задач', id: 'task-view', noTrainer: true },
+    { keys: ['Win', 'D'], desc: 'Скрыть все вкладки', id: 'hide-tabs', noTrainer: true },
+    { keys: ['Win', 'I'], desc: 'Открыть параметры', id: 'settings-open', noTrainer: true },
+    { keys: ['Ctrl', 'W'], desc: 'Быстро закрыть окно', id: 'close-window', noTrainer: true },
+    { keys: ['Alt', 'Tab'], desc: 'Переход между вкладками', id: 'switch-tabs', noTrainer: true },
+    { keys: ['Alt', 'F4'], desc: 'Закрыть активное окно', id: 'close-active', noTrainer: true },
+    { keys: ['Ctrl', 'Shift', 'Esc'], desc: 'Открыть диспетчер задач', id: 'task-manager', noTrainer: true },
+    { keys: ['Ctrl', 'Shift', 'T'], desc: 'Восстановить закрытую вкладку', id: 'restore-tab', noTrainer: true },
+    { keys: ['Ctrl', 'Tab'], desc: 'Следующая вкладка', id: 'next-tab', noTrainer: true },
+    { keys: ['F11'], desc: 'Полноэкранный режим', id: 'fullscreen', noTrainer: true }
+  ];
+
+  const shortcutsGrid = document.getElementById('shortcutsGrid');
+  shortcuts.forEach(s => {
+    const item = document.createElement('div');
+    item.className = 'shortcut-item';
+    item.innerHTML = `
+      <span class="shortcut-desc">${s.desc}</span>
+      <span class="shortcut-keys">
+        ${s.keys.map(k => `<span class="key">${k}</span>`).join('')}
+      </span>
+    `;
+    shortcutsGrid.appendChild(item);
+  });
+
+  // ===== ТРЕНАЖЁР =====
+  const trainerBtn = document.getElementById('trainerBtn');
+  const trainerOverlay = document.getElementById('trainerOverlay');
+  const trainerClose = document.getElementById('trainerClose');
+  const trainerTask = document.getElementById('trainerTask');
+  const trainerKeys = document.getElementById('trainerKeys');
+  const trainerFeedback = document.getElementById('trainerFeedback');
+  const trainerProgress = document.getElementById('trainerProgress');
+  const trainerCounter = document.getElementById('trainerCounter');
+  const trainerRestart = document.getElementById('trainerRestart');
+  const notesEditable = document.getElementById('notesEditable');
+
+  // Текст, который уже будет в заметках по умолчанию
+  const DEFAULT_NOTES_TEXT = `Добро пожаловать в тренажёр!
+Здесь вы можете записывать свои комбинации или важные заметки.
+
+💡 Подсказка для Win + V:
+В этом тренажёре не нужно пытаться нажать клавишу Win (Windows её перехватит).
+Просто нажмите клавишу V, и тренажёр засчитает это как Win + V.`;
+
+  // Загрузка заметок (если пусто — ставим текст по умолчанию)
+  const savedNotes = localStorage.getItem('site-notes');
+  if (savedNotes) {
+    notesEditable.textContent = savedNotes;
+  } else {
+    notesEditable.textContent = DEFAULT_NOTES_TEXT;
+    localStorage.setItem('site-notes', DEFAULT_NOTES_TEXT);
+  }
+
+  // Сохранение заметок при вводе
+  notesEditable.addEventListener('input', () => {
+    localStorage.setItem('site-notes', notesEditable.textContent);
+  });
+
+  let tasks = [];
+  let currentTask = 0;
+  let isListening = false;
+  let expectedKeys = [];
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function startTrainer() {
+    tasks = shuffle(shortcuts.filter(s => !s.noTrainer));
+    currentTask = 0;
+    trainerRestart.classList.remove('visible');
+    trainerOverlay.classList.add('open');
+    renderTask();
+  }
+
+  function renderTask() {
+    if (currentTask >= tasks.length) {
+      showFinish();
+      return;
+    }
+
+    const task = tasks[currentTask];
+    expectedKeys = task.keys.map(k => k.toLowerCase());
+    trainerTask.textContent = task.desc;
+    trainerFeedback.textContent = '';
+    trainerFeedback.className = 'trainer-feedback';
+    trainerCounter.textContent = `Задание ${currentTask + 1} из ${tasks.length}`;
+    trainerProgress.style.width = `${((currentTask) / tasks.length) * 100}%`;
+
+    // Отрисовка клавиш (Win НЕ зажата по умолчанию)
+    trainerKeys.innerHTML = task.keys.map(k => `<span class="trainer-key" data-key="${k.toLowerCase()}">${k}</span>`).join('');
+    isListening = true;
+  }
+
+  function showFinish() {
+    trainerProgress.style.width = '100%';
+    trainerCounter.textContent = 'Все задания выполнены!';
+    trainerTask.textContent = '🎉 Отлично! Вы прошли тренировку!';
+    trainerKeys.innerHTML = '';
+    trainerFeedback.textContent = '';
+    trainerRestart.classList.add('visible');
+    isListening = false;
+  }
+
+  // Соответствие русских букв английским
+  const RU_TO_EN = {
+    'й': 'q', 'ц': 'w', 'у': 'e', 'к': 'r', 'е': 't', 'н': 'y', 'г': 'u', 'ш': 'i', 'щ': 'o', 'з': 'p',
+    'х': '[', 'ъ': ']', 'ф': 'a', 'ы': 's', 'в': 'd', 'а': 'f', 'п': 'g', 'р': 'h', 'о': 'j', 'л': 'k',
+    'д': 'l', 'ж': ';', 'э': "'", 'я': 'z', 'ч': 'x', 'с': 'c', 'м': 'v', 'и': 'b', 'т': 'n', 'ь': 'm',
+    'б': ',', 'ю': '.', 'ё': '`'
+  };
+
+  function normalizeKey(key) {
+    const k = key.toLowerCase();
+    if (RU_TO_EN[k]) return RU_TO_EN[k];
+    const special = {
+      'escape': 'esc',
+      'control': 'ctrl',
+      'meta': 'win',
+      ' ': 'space',
+      '=': '+',
+      'add': '+',
+      'equal': '+'
+    };
+    return special[k] || k;
+  }
+
+  function checkKeys(e) {
+    if (!isListening) return;
+
+    const pressed = [];
+    if (e.ctrlKey) pressed.push('ctrl');
+    if (e.altKey) pressed.push('alt');
+    if (e.shiftKey) pressed.push('shift');
+    if (e.metaKey || e.key === 'Meta') pressed.push('win');
+
+    const rawKey = e.key.toLowerCase();
+    const isModifier = ['control', 'alt', 'shift', 'meta'].includes(rawKey);
+    const key = normalizeKey(e.key);
+
+    const expectedSet = new Set(expectedKeys);
+
+    // Если мы ждем Win+V, и пользователь нажал V
+    if (expectedKeys.includes('win') && expectedKeys.includes('v') && key === 'v') {
+      // Визуально зажигаем кнопку Win ТОЛЬКО в момент нажатия V
+      const winEl = trainerKeys.querySelector('[data-key="win"]');
+      if (winEl) winEl.classList.add('pressed');
+      
+      // Добавляем win в список нажатых для проверки
+      if (!pressed.includes('win')) pressed.push('win');
+    }
+
+    const isExpectedModifier = pressed.some(m => expectedSet.has(m));
+    const isExpectedKey = expectedSet.has(key) || isExpectedModifier;
+    const inNotes = document.activeElement === notesEditable;
+
+    if (!inNotes && isExpectedKey) {
+      e.preventDefault();
+    }
+
+    if (isModifier) {
+      const modName = rawKey === 'control' ? 'ctrl' : rawKey === 'meta' ? 'win' : rawKey;
+      const el = trainerKeys.querySelector(`[data-key="${modName}"]`);
+      if (el && expectedKeys.includes(modName)) el.classList.add('pressed');
+      return;
+    }
+
+    const combo = [...pressed];
+    combo.push(key);
+
+    const comboSet = new Set(combo);
+    let match = false;
+    if (comboSet.size === expectedSet.size) {
+      match = true;
+      for (const k of comboSet) {
+        if (!expectedSet.has(k)) {
+          match = false;
+          break;
+        }
+      }
+    }
+
+    const keyEls = trainerKeys.querySelectorAll('.trainer-key');
+    // Снимаем pressed со всех, кроме Win, если он есть в задании
+    keyEls.forEach(el => {
+      if (el.dataset.key !== 'win') el.classList.remove('pressed', 'correct', 'wrong');
+    });
+
+    combo.forEach(k => {
+      const el = trainerKeys.querySelector(`[data-key="${k}"]`);
+      if (el) el.classList.add('pressed');
+    });
+
+    if (match) {
+      if (!inNotes) {
+        e.preventDefault();
+      }
+      keyEls.forEach(el => {
+        el.classList.remove('pressed');
+        el.classList.add('correct');
+      });
+      trainerFeedback.textContent = '✅ Правильно! Переход к следующему заданию...';
+      trainerFeedback.className = 'trainer-feedback success';
+      isListening = false;
+
+      setTimeout(() => {
+        currentTask++;
+        renderTask();
+      }, 900);
+    } else {
+      if (inNotes && !isExpectedKey) {
+        return;
+      }
+
+      keyEls.forEach(el => {
+        if (el.classList.contains('pressed') && el.dataset.key !== 'win') {
+          el.classList.remove('pressed');
+          el.classList.add('wrong');
+        }
+      });
+      trainerFeedback.textContent = '❌ Неправильно. Попробуйте ещё раз';
+      trainerFeedback.className = 'trainer-feedback error';
+
+      setTimeout(() => {
+        keyEls.forEach(el => {
+          if (el.dataset.key !== 'win') el.classList.remove('wrong', 'pressed');
+        });
+      }, 600);
+    }
+  }
+
+  trainerBtn.addEventListener('click', startTrainer);
+  trainerClose.addEventListener('click', () => {
+    trainerOverlay.classList.remove('open');
+    isListening = false;
+  });
+  trainerOverlay.addEventListener('click', (e) => {
+    if (e.target === trainerOverlay) {
+      trainerOverlay.classList.remove('open');
+      isListening = false;
+    }
+  });
+  trainerRestart.addEventListener('click', startTrainer);
+
+  document.addEventListener('keydown', (e) => {
+    if (trainerOverlay.classList.contains('open')) {
+      if (e.key === 'Escape' && !isListening) {
+        trainerOverlay.classList.remove('open');
+        e.preventDefault();
+        return;
+      }
+
+      if (isListening) {
+        checkKeys(e);
+      }
+    }
+
+    if (e.key === 'Escape') {
+      closePanel();
+    }
+  });
+
+  window.addEventListener('blur', () => {
+    document.querySelectorAll('.trainer-key.pressed').forEach(el => el.classList.remove('pressed'));
+  });
+
+})();
+</script>
+
+</body>
+</html>
